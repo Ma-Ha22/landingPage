@@ -1,0 +1,233 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --main-clr: #fff;
+    --sec-clr: gray;
+    direction: rtl;
+}
+
+/* global */
+a {
+    all: unset;
+    cursor: pointer;
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+.myhero-section {
+    position: relative;
+}
+
+.myhero-section .logo {
+    width: 20%;
+    position: absolute;
+    top: 1%;
+    left: 40%;
+    z-index: 9999;
+}
+
+.myhero-section .logo img {
+    width: 100%;
+}
+
+.myhero-section .myhero-caption {
+    position: absolute;
+    top: 24%;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    line-height: 2.2rem;
+    margin-top: 3rem;
+}
+
+.myhero-caption .view-btn .btn,
+.sectionThree .view-btn .btn {
+    color: var(--main-clr);
+    border: 2px solid var(--main-clr);
+    padding: .7rem 1.2rem;
+}
+
+.myhero-caption .view-btn .btn:hover,
+.sectionThree .view-btn .btn:hover {
+    border-color: gray;
+}
+
+.mobile-hero-section {
+    display: none;
+}
+
+@media screen and (width < 900px) {
+
+    /* .myhero-section{
+        height: 100vh;
+    } */
+    .carousel,
+    .carousel-item,
+    .carousel-inner,
+    .carousel-inner img {
+        height: 100vh !important;
+    }
+}
+
+@media screen and (width < 593px) {
+    .laptop {
+        display: none;
+    }
+
+    .mobile-hero-section {
+        display: block;
+        color: var(--main-clr);
+        position: relative;
+        padding: 10rem 2rem 2rem 2rem;
+    }
+}
+
+@media screen and (width < 440px) {
+    .myhero-section .logo {
+        width: 30%;
+    }
+
+    .mobile-img {
+        width: 100% !important;
+    }
+}
+@media screen and (width < 323px) {
+    .myhero-section .logo {
+        width: 60%;
+        left: 30%;
+    }
+}
+
+/* end */
+/* start sectionTwo */
+.sectionTwo {
+    background-image: url(./../imgs/slide4.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.sectionTwo-content {
+    position: absolute;
+    top: 30%;
+    right: 6%;
+    width: 50%;
+    font-size: 1.2rem;
+    color: var(--main-clr);
+}
+
+.sectionTwo-content .view-btn .btn{
+    border: 2px solid var(--sec-clr);
+    color: var(--main-clr);
+}
+.sectionTwoMobile-content .view-btn .btn{
+    border: 2px solid var(--sec-clr);
+    color: #000;
+}
+
+.sectionTwo-content .view-btn .btn:hover, .sectionTwoMobile-content .view-btn .btn:hover {
+    opacity: .7;
+}
+.sectionTwoMobile{
+    display: none;
+}
+@media screen and (width < 724px) {
+    .sectionTwo {
+        display: none;
+    }
+    .mbile-img img{
+        position: relative;
+        z-index: 9;
+    }
+    .mobile-clip{
+        position: absolute;
+            left: 0;
+            top: -109%;
+            z-index: 2;
+            /* bottom: 10px; */
+            background-color: var(--sec-clr);
+            clip-path: polygon(40% 49%, 0 0, 0 100%);
+            width: 357px;
+            height: 323%;
+    }
+}
+@media screen and (width < 576px){
+    .mobile-clip{
+        display: none;
+    }
+    .mob-sec{
+        padding-bottom: 0 !important;
+        padding-right: 1rem !important;
+    }
+}
+/* end */
+.sectionThree {
+    background-image: url(./../imgs/slid6.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+.sectionThree-content {
+    position: absolute;
+    top: 30%;
+    left: 12%;
+    width: 50%;
+    font-size: 1.2rem;
+    color: var(--main-clr);
+}
+@media screen and (width < 708px){
+    .sectionThree{
+        background-image: url(./../imgs/photo-1667159590020-710c32ea143a.avif);
+        background-size: cover;
+    }
+    .sectionThree-content{
+        top: 10%;
+    }
+}
+@media screen and (width < 578px){
+    .sectionThree{
+        background-position: center center;
+    }
+    .sectionThree-content{
+        width: 70%;
+    }
+}
+@media screen and (width < 353px){
+    .sectionThree-content{
+        width: 80%;
+        font-size: 1rem;
+    }
+}
+/* start footer */
+footer {
+    font-size: 0.8rem;
+    background-color: #e3e3e3;
+}
+
+footer .text-uppercase {
+    color: var(--sec-clr);
+}
+
+footer .fa {
+    color: var(--sec-clr);
+}
+
+.social .fa {
+    color: var(--sec-clr);
+
+    /* color: var(--primary-color) !important; */
+    font-size: 20px !important;
+}
+
+/* end footer */
